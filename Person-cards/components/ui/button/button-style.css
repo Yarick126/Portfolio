@@ -1,0 +1,12 @@
+button{
+  display: inline;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: aqua;
+}
+
+button:hover{
+  color: aqua;
+  background-color: black;
+  transition: all 0.5s;
+}
