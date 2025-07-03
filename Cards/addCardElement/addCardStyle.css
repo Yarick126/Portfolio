@@ -1,0 +1,11 @@
+.addCard{
+  height: fit-content;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 2.5vh;
+}
+
+.addCard:hover{
+  color: aqua;
+  transition: all 0.5s;
+}
