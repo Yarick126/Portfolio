@@ -1,22 +1,21 @@
-import {CardElement} from './components/cardElement/Card.js'
-import { AddCard} from './components/addCardElement/AddCard.js'
-import PERSON_DATA_ARRAY from './data/constants.js'
+import {Card} from './components/Card/Card.js'
+import PERSON_DATA_ARRAY from './core/data/constants.js'
 import { CardCreate } from './components/cardCreateElement/CardCreate.js'
 
-const appDiv = document.querySelector('#app') 
 
+const appDiv = document.querySelector('#app') 
+const back = document.createElement('div')
+  
 
 function app(){
 
-  const back = document.createElement('div')
-  
+
   back.classList.add('backGround')
   back.appendChild(CardCreate())
   PERSON_DATA_ARRAY.map((e)=>{
-    back.appendChild(CardElement(e))
+    back.appendChild(Card(e))
   })
-  back.appendChild(AddCard())
-
+  back.appendChild(Card())
   appDiv.appendChild(back)
 }
 

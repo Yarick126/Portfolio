@@ -1,0 +1,7 @@
+ textarea {
+  padding: 5px;
+  resize: none;
+  border: solid 2px black;
+  border-radius: 5px;
+  background-color: aquamarine;
+ }

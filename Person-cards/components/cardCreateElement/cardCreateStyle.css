@@ -1,18 +1,9 @@
 .cardCreateForm{
-  font-size: 20px;
-  padding: 30px;
-  background-color: aqua;
-  width: 50vw;
-  height: fit-content;
+  margin-top: 10vh;
+  margin-left: 20vw;
   z-index: 101;
+
   
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-
-  border: solid black 3px;
-
-  border-radius: 15px;
 }
 
 .filter{
@@ -26,14 +17,23 @@
   left: 0;
   z-index: 100;
 
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-  align-items: center;
+  display: none;
 }
 
 .formTitle{
   font-size: 30px;
   font-weight: 700;
 }
+
+input[type="number"]{
+  width: 5vw;
+}
+
+.sendButton{
+  margin-top: 2vh;
+}
+
+.closeButton{
+  margin-top: 2vh;
+}
+

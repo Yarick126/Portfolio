@@ -1,6 +1,10 @@
 input {
+  width: 20vw;
   padding: 4px;
   border: solid 2px black;
   border-radius: 5px;
   background-color: aquamarine;
 }
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+input[type="number"] { -moz-appearance: textfield; } 

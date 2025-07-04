@@ -10,6 +10,10 @@ export class Input {
     this.input.type = type 
     this.input.autocomplete = autocomplete
 
+    if(type == 'number'){
+      this.input.maxLength
+    }
+
     return this.input
   }
 }
