@@ -1,0 +1,39 @@
+.cardCreateForm{
+  margin-top: 10vh;
+  margin-left: 20vw;
+  z-index: 101;
+
+  
+}
+
+.filter{
+
+  padding: 30px;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+
+  display: none;
+}
+
+.formTitle{
+  font-size: 30px;
+  font-weight: 700;
+}
+
+input[type="number"]{
+  width: 5vw;
+}
+
+.sendButton{
+  margin-top: 2vh;
+}
+
+.closeButton{
+  margin-top: 2vh;
+}
+

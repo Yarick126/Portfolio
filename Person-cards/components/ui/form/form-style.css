@@ -1,0 +1,16 @@
+form{
+  font-size: 20px;
+  
+  padding: 30px;
+  
+  background-color: aqua;
+  
+  width: 50vw;
+  height: fit-content;
+  border: solid black 3px;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+
+}

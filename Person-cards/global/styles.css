@@ -1,0 +1,44 @@
+ @import url(reset.css);
+ @import url(../components//ui/button/button-style.css);
+ @import url(../components/ui/input/input-style.css);
+ @import url(../components/ui/label/label-style.css);
+ @import url(../components//ui//form//form-style.css);
+ @import url(../components//ui//image//image-style.css);
+ @import url(../components/cardCreateElement/cardCreateStyle.css);
+ @import url(../components/Card/card-style.css);
+@import url(../components//ui//textarea/textarea-style.css);
+ @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+ html {
+  padding: 25px;
+  background-color: bisque;
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+ }
+ body{
+  width: 100%;
+  height: 100%;
+ }
+
+ a{
+  color: black;
+ }
+
+ .backGround {
+  border: solid 10px sandybrown;
+  border-radius: 30px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  row-gap: 5px;
+  flex-wrap: wrap;
+  padding: 15px;
+  background-color: rgb(206, 147, 140);
+ }
+
+ 
