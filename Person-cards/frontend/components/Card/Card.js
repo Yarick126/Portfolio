@@ -9,6 +9,7 @@ export const Card = ( person ) =>{
   const Card = document.createElement('section')
   Card.className = 'card'
   if(!person) {
+    Card.style.padding = '0px'
     Card.appendChild(new Button(
     ()=>{
       document.getElementById('formBackground').style.display = 'block'

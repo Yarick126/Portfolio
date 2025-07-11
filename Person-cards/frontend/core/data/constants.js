@@ -2,7 +2,7 @@ const PERSON_DATA_ARRAY =
 [
   {
     id:0,
-    imgSrc: '/Portfolio/Person-cards/public/Yaroslav.jpg',
+    imgSrc: '/Portfolio/Person-cards/frontend/public/Yaroslav.jpg',
     name: 'Yaroslav',
     age: 24,
     surname: 'Gadzhikurbanov',

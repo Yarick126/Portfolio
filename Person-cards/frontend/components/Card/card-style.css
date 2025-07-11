@@ -1,6 +1,6 @@
 .card{
 
-  font-size: 1.2vw;
+  font-size: 1.1vw;
   width: 15vw;
   border: solid 5px black;
   border-radius: 20px;
@@ -11,6 +11,12 @@
   row-gap: 10px;
 }
 
+.card:hover {
+  -webkit-box-shadow: 0px 2px 5px 9px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 2px 5px 9px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 2px 5px 9px rgba(34, 60, 80, 0.2);
+  cursor: pointer;
+}
 
 .card_top{
   display: flex;
@@ -50,9 +56,11 @@
   height: 100%;
   font-weight: bold;
   font-size: 30px;
+  border-radius: 14px;
 }
 
 .addCard:hover{
-  color: seagreen;
+  color: aqua;
+  border: solid 5px black;
   transition: all 0.5s;
 }
