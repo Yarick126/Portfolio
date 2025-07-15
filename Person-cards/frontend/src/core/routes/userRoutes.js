@@ -3,8 +3,9 @@ import { customAxios } from "../customAxios.js";
 // получить все карточки
 export async function getAllUsers() {
   try {
-    const users = await customAxios.get('/users/')
-    return users.data.data;
+    const {data} = await customAxios.get('/users/')
+    
+    return data;
   } catch (error) {
     console.log(error.message);
   }
@@ -14,6 +15,24 @@ export async function getAllUsers() {
 export async function createUser (params) {
   try {
     await customAxios.post('/users/createUser', params)
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+// удалить карточку
+export async function deleteUser(id) {
+  try {
+    await customAxios.delete(`/users/deleteUser/${id}`)
+    await location.reload();
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+export async function updateUser(id) {
+  try {
+    await customAxios.patch(`/users/updateUser/${id}`)
   } catch (error) {
     console.log(error.message);
   }
