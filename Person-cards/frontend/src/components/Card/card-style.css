@@ -64,3 +64,14 @@
   border: solid 5px black;
   transition: all 0.5s;
 }
+
+.cardBottomButtons {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.5em;
+}
+.cardBottomButtons> button{
+   font-size: inherit;
+   border: solid 1px black;
+   border-radius: 4px;
+}

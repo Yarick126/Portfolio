@@ -1,3 +1,4 @@
+import { createUser } from "../../core/routes/userRoutes.js"
 import { Button } from "../ui/button/Button.js"
 import { Form } from "../ui/form/Form.js"
 import { Input } from "../ui/input/Input.js"
@@ -28,9 +29,9 @@ export const CardCreate = () => {
     e.preventDefault()
     document.getElementById('formBackground').style.display = 'none'
   })
-  const sendHandler = () =>{}
 
-  cardCreateForm.appendChild(new Button(sendHandler, 'Send', 'sendButton','send_button'))
+
+  cardCreateForm.appendChild(new Button(createUser(), 'Send', 'sendButton','send_button'))
   
   cardCreateElement.appendChild(cardCreateForm)
 

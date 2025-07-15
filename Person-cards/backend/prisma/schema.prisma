@@ -17,4 +17,5 @@ model User {
   surname   String
   sex       String
   bio       String
+  age       Int     @default(0)
 }

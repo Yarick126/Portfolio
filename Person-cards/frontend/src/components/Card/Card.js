@@ -1,3 +1,4 @@
+import { deleteUser, updateUser } from "../../core/routes/userRoutes.js"
 import { Button } from "../ui/button/Button.js"
 import { Image } from "../ui/image/Image.js"
 import './card-style.css'
@@ -40,8 +41,13 @@ export const Card = ( person ) =>{
   card_bio.className = 'card_bio'
   card_bio.textContent = person?.bio
 
-  card_bottom.appendChild(card_bio)
+  const card_bottom_buttons = document.createElement('div')
+  card_bottom_buttons.className = 'cardBottomButtons'
+  card_bottom_buttons.appendChild(new Button(updateUser(person.id),'Update', 'updateButton', person.id))
+  card_bottom_buttons.appendChild(new Button(deleteUser(person.id),'Delete', 'deleteButton', person.id))
 
+  card_bottom.appendChild(card_bio)
+  card_bottom.appendChild(card_bottom_buttons)
   card_top.appendChild(new Image(person?.imgSrc,'personImage'))
   card_top.appendChild(card_about)
 
