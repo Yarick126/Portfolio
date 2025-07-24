@@ -12,9 +12,9 @@ export async function getAllUsers() {
 }
 
 // создать карточку
-export async function createUser (params) {
+export async function createUser (user) {
   try {
-    await customAxios.post('/users/createUser', params)
+    await customAxios.post('/users/createUser', user)
   } catch (error) {
     console.log(error.message);
   }
@@ -24,7 +24,6 @@ export async function createUser (params) {
 export async function deleteUser(id) {
   try {
     await customAxios.delete(`/users/deleteUser/${id}`)
-    await location.reload();
   } catch (error) {
     console.log(error.message);
   }

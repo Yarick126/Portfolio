@@ -1,6 +1,7 @@
 import express from 'express'
 import userRouter from './routes/user.router.js'
 import cors from 'cors'
+import { errorHandler } from './middleware/error-handler.js'
 
 
 const app = express()
@@ -14,6 +15,8 @@ app.use(cors({
 }))
 app.use(express.json())
 app.use('/users',userRouter)
+
+app.use(errorHandler)
 
 app.listen(port, () =>{
   console.log(`Server working on ${port}`)
