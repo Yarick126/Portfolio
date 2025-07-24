@@ -4,11 +4,10 @@ export class Form {
 
   form = document.createElement('form')
 
-  constructor(method, name, classname,components, autocomplete = 'on'){
-    this.form.method = method
+  constructor(name, classname,components, autocomplete = 'on'){
     this.form.name = name
     this.form.className = classname
-
+    this.form.autocomplete = autocomplete
     this.form.addEventListener('click', (e)=>{
       if (e.stopPropagation) e.stopPropagation();
     })

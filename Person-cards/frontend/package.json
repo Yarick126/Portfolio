@@ -4,7 +4,6 @@
  "main": "app.js",
  "license": "MIT",
  "scripts": {
-  "build": "webpack",
   "dev": "webpack --mode development",
   "serve": "webpack serve --open --mode development"
  },

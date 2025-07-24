@@ -1,5 +1,7 @@
 import { createUser } from "../../core/routes/userRoutes.js"
+import User from "../../core/User.js"
 import { Button } from "../ui/button/Button.js"
+import { DropDown } from "../ui/dropdown/DropDown.js"
 import { Form } from "../ui/form/Form.js"
 import { Input } from "../ui/input/Input.js"
 import { Label } from "../ui/label/Label.js"
@@ -8,18 +10,28 @@ import './cardCreateStyle.css'
 
 export const CardCreate = () => {
 
-  const cardCreateForm = new Form('post','CreatePersonForm','cardCreateForm',
+  const inputName = new Input('Enter name', 'name', 'person_name');
+  const inputSurname = new Input('Enter surname', 'surname', 'person_surname');
+  const inputAge = new Input(0,'age', 'person_age', 'number')
+  const inputBio = new Textarea('Persons bio (max length 300)', 'bio',2, 6)
+  const inputImgSrc = new Input('image source', 'imgSrc', 'image_src')
+  const dropDown = new DropDown(['male', 'female'])
+  const cardCreateForm = new Form('CreatePersonForm','cardCreateForm',
     [
       new Label('Person card create', 'card_create', 'formTitle'),
       new Label('Name','name'),
-      new Input('Enter name', 'name', 'person_name'),
+      inputName,
       new Label('Surname','surname'),
-      new Input('Enter surname', 'surname', 'person_surname'),
+      inputSurname,
+      new Label('Sex','sex'),
+      dropDown,
       new Label('Age','age'),
-      new Input(0,'age', 'person_age', 'number'),
+      inputAge,
+      new Label('Image','image'),
+      inputImgSrc,
       new Label('Bio','bio'),
-      new Textarea('Persons bio (max length 300)', 'bio',2, 6)
-    ])
+      inputBio
+    ]);
   
   const cardCreateElement = document.createElement('div')
   
@@ -31,7 +43,18 @@ export const CardCreate = () => {
   })
 
 
-  cardCreateForm.appendChild(new Button(createUser(), 'Send', 'sendButton','send_button'))
+  cardCreateForm.appendChild(new Button((e)=>{
+    e.preventDefault()
+    const name = inputName.value
+    const surname = inputSurname.value
+    const age = inputAge.value
+    const sex = dropDown.firstChild.value
+    const imgSrc = inputImgSrc.value
+    const bio = inputBio.value
+    const user = new User({name,surname, age, sex, imgSrc, bio})
+    console.log(user);
+    createUser(user)
+  }, 'Send', 'sendButton','send_button'))
   
   cardCreateElement.appendChild(cardCreateForm)
 

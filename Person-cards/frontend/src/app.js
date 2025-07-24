@@ -1,5 +1,5 @@
 import './global/styles.css'
-import { HOME_ROOT, HomePage } from './pages/Home.js'
+import {HomePage } from './pages/Home.js'
 
 const appDiv = document.querySelector('#app') 
 
