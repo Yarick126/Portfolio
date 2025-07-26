@@ -43,7 +43,10 @@ export const Card = ( person ) =>{
 
   const card_bottom_buttons = document.createElement('div')
   card_bottom_buttons.className = 'cardBottomButtons'
-  card_bottom_buttons.appendChild(new Button(updateUser(person.id),'Update', 'updateButton', person.id))
+  card_bottom_buttons.appendChild(new Button(()=>
+    {
+      
+    },'Update', 'updateButton', person.id))
   card_bottom_buttons.appendChild(new Button(()=> {
     deleteUser(person.id)
     location.href = location.href

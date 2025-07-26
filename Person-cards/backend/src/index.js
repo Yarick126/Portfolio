@@ -2,10 +2,12 @@ import express from 'express'
 import userRouter from './routes/user.router.js'
 import cors from 'cors'
 import { errorHandler } from './middleware/error-handler.js'
-
+import morgan from 'morgan'
 
 const app = express()
 const port = process.env.PORT || 3001
+
+app.use(morgan('dev'))
 
 app.use(cors({
   origin: "*",
