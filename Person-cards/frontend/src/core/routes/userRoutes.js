@@ -14,7 +14,9 @@ export async function getAllUsers() {
 // создать карточку
 export async function createUser (user) {
   try {
-    await customAxios.post('/users/createUser', user)
+    const newUser = await customAxios.post('/users/createUser', user)
+    console.log(newUser);
+    
   } catch (error) {
     console.log(error.message);
   }

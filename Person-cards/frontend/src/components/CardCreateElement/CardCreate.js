@@ -1,5 +1,4 @@
 import { createUser } from "../../core/routes/userRoutes.js"
-import User from "../../core/User.js"
 import { Button } from "../ui/button/Button.js"
 import { DropDown } from "../ui/dropdown/DropDown.js"
 import { Form } from "../ui/form/Form.js"
@@ -47,13 +46,11 @@ export const CardCreate = () => {
     e.preventDefault()
     const name = inputName.value
     const surname = inputSurname.value
-    const age = inputAge.value
+    const age = +inputAge.value
     const sex = dropDown.firstChild.value
     const imgSrc = inputImgSrc.value
     const bio = inputBio.value
-    const user = new User({name,surname, age, sex, imgSrc, bio})
-    console.log(user);
-    createUser(user)
+    createUser({name,surname, age, sex, imgSrc, bio})
   }, 'Send', 'sendButton','send_button'))
   
   cardCreateElement.appendChild(cardCreateForm)
