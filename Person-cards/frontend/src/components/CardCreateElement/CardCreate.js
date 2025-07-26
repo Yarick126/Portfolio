@@ -1,4 +1,5 @@
 import { createUser } from "../../core/routes/userRoutes.js"
+import { fieldValidation } from "../../core/utils/form-validation.js"
 import { Button } from "../ui/button/Button.js"
 import { DropDown } from "../ui/dropdown/DropDown.js"
 import { Form } from "../ui/form/Form.js"
@@ -44,13 +45,21 @@ export const CardCreate = () => {
 
   cardCreateForm.appendChild(new Button((e)=>{
     e.preventDefault()
-    const name = inputName.value
-    const surname = inputSurname.value
-    const age = +inputAge.value
-    const sex = dropDown.firstChild.value
-    const imgSrc = inputImgSrc.value
-    const bio = inputBio.value
-    createUser({name,surname, age, sex, imgSrc, bio})
+
+    if(fieldValidation(inputName.value) || fieldValidation(inputSurname.value) || fieldValidation(dropDown.firstChild.value) || fieldValidation(inputBio.value)) {
+      const name = inputName.value
+      const surname = inputSurname.value
+      const age = +inputAge.value
+      const sex = dropDown.firstChild.value
+      const imgSrc = inputImgSrc.value
+      const bio = inputBio.value
+      createUser({name,surname, age, sex, imgSrc, bio})
+    }
+    else {
+      alert('Field missing')
+    }
+
+    
   }, 'Send', 'sendButton','send_button'))
   
   cardCreateElement.appendChild(cardCreateForm)
